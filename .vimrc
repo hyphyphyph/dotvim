@@ -8,7 +8,7 @@ set background=dark
 " colorscheme solarized
 colorscheme molokai
 
-" set guifont=Monospace\ 10
+set guifont=Monospace\ 10
 " set guifont=monofur\ 14
 " set guifont=M+\ 1m\ 10
 set guifont=Verily\ Serif\ Mono\ 10
@@ -23,7 +23,7 @@ set magic
 set ignorecase
 
 set scrolloff=1
-set linespace=-1
+set linespace=0
 
 set showmatch
 set matchtime=1024 " Because... I can
