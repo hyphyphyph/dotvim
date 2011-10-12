@@ -8,11 +8,11 @@ set background=dark
 " colorscheme solarized
 colorscheme molokai
 
-" set guifont=Monospace\ 10
+set guifont=Monospace\ 10
 " set guifont=monofur\ 14
 " set guifont=M+\ 1m\ 10
 " set guifont=Verily\ Serif\ Mono\ 10
-set guifont=Ubuntu\ Mono\ 12
+" set guifont=Ubuntu\ Mono\ 12
 " set guifont=Terminus\ 14
 " set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 " set guifont=Clean\ 10
