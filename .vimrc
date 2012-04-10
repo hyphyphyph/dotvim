@@ -1,6 +1,9 @@
+call pathogen#infect()
+
 set go-=m
 set go-=T
 set go+=i " Use a friggin icon
+set mouse=a
 
 syntax on
 set background=dark
@@ -8,7 +11,7 @@ set background=dark
 " colorscheme solarized
 colorscheme molokai
 
-set guifont=Monospace\ 10
+set guifont=Monospace\ 8
 " set guifont=monofur\ 14
 " set guifont=M+\ 1m\ 10
 " set guifont=Verily\ Serif\ Mono\ 10
@@ -22,6 +25,9 @@ set guifont=Monospace\ 10
 set preserveindent
 set magic
 set ignorecase
+
+filetype on
+filetype plugin on
 
 set scrolloff=1
 set linespace=0
@@ -40,6 +46,8 @@ map <C-Left> :tabprevious<cr>
 map <S-A-Up> :fold<cr>
 map <S-A-Down> :foldopen<cr>
 
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 au BufNewFile,BufRead *.mako set filetype=python
 au BufNewFile,BufRead *.json set filetype=javascript
