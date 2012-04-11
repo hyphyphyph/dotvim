@@ -11,9 +11,9 @@ set background=dark
 " colorscheme solarized
 colorscheme molokai
 
-set guifont=Monospace\ 8
+" set guifont=Monospace\ 10
 " set guifont=monofur\ 14
-" set guifont=M+\ 1m\ 10
+set guifont=M+\ 1m\ 10
 " set guifont=Verily\ Serif\ Mono\ 10
 " set guifont=Ubuntu\ Mono\ 12
 " set guifont=Terminus\ 14
@@ -30,7 +30,7 @@ filetype on
 filetype plugin on
 
 set scrolloff=1
-set linespace=0
+set linespace=-1
 
 set showmatch
 set matchtime=1024 " Because... I can
@@ -50,6 +50,7 @@ nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 au BufNewFile,BufRead *.mako set filetype=python
+au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.json set filetype=javascript
 
 autocmd BufWritePre * :%s/\s\+$//e
