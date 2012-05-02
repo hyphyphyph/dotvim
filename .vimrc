@@ -1,4 +1,38 @@
-call pathogen#infect()
+set nocompatible               " be iMproved
+filetype on                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'kien/ctrlp.vim'
+Bundle 'Shougo/neocomplcache'
+Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-surround'
+" Bundle 'michaeljsmith/vim-indent-object'
+" Bundle 'chrismetcalf/vim-yankring'
+" Bundle 'scrooloose/syntastic'
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-powerline'
+Bundle 'groenewege/vim-less'
+Bundle 'embear/vim-localvimrc'
+Bundle 'ciaranm/detectindent'
+
+
+let g:neocomplcache_enable_at_startup = 1
+
+" let g:Powerline_symbols = 'fancy'
+" let g:Powerline_cache_enabled = 1
+
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set showbreak=↪
+
+" call pathogen#infect()
+
+" let g:Powerline_symbols = 'fancy'
+" let g:Powerline_cache_enabled = 1
 
 set go-=m
 set go-=T
@@ -13,14 +47,16 @@ colorscheme molokai
 
 " set guifont=Monospace\ 10
 " set guifont=monofur\ 14
-set guifont=M+\ 1m\ 10
+" set guifont=M+\ 1m\ 10
 " set guifont=Verily\ Serif\ Mono\ 10
 " set guifont=Ubuntu\ Mono\ 12
 " set guifont=Terminus\ 14
 " set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 " set guifont=Clean\ 10
 " set guifont=Monofur\ 12
-" set guifont=Envy\ Code\ R\ 10
+" set guifont=Envy\ Code\ R\ Powerline\ 10
+
+" set wildmode=list:longest
 
 set preserveindent
 set magic
@@ -52,6 +88,7 @@ nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 au BufNewFile,BufRead *.mako set filetype=python
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.json set filetype=javascript
+au BufNewFile,BufRead *.less set filetype=less
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -174,3 +211,8 @@ nmap <M-Backspace> mzbd`zx
 
 vmap gt' s'gvs)gvs}i$<Esc>la_<Esc>gvll
 vmap gt" s"gvs)gvs}i$<Esc>la_<Esc>gvll
+
+" vmap _jsp' s'gvs)%a;<esc>h%i$.t<esc>gv/'<cr>lls>a%=<space><esc>/><cr>i<space>%<esc>2?'<esc>l
+" vmap _jsp" s"gvs)%a;<esc>h%i$.t<esc>gv/"<cr>lls>a%=<space><esc>/><cr>i<space>%<esc>2?"<esc>l
+
+map <leader>t :CtrlPCurWD<cr>
