@@ -6,20 +6,23 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-" Bundle 'kien/ctrlp.vim'
-Bundle 'Shougo/neocomplcache'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'scrooloose/nerdcommenter'
+Bundle 'buftabs'
+Bundle 'kien/ctrlp.vim'
+
 Bundle 'tpope/vim-surround'
-" Bundle 'michaeljsmith/vim-indent-object'
-" Bundle 'chrismetcalf/vim-yankring'
-" Bundle 'scrooloose/syntastic'
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-powerline'
-Bundle 'groenewege/vim-less'
-Bundle 'embear/vim-localvimrc'
+Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/detectindent'
+
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/w3scraper'
+
+Bundle 'groenewege/vim-less'
+
 Bundle 'pangloss/vim-javascript'
+Bundle 'hallettj/jslint.vim'
+
+Bundle 'altercation/vim-colors-solarized'
 
 
 let g:neocomplcache_enable_at_startup = 1
@@ -44,10 +47,9 @@ map <leader>m :set mouse+=a<cr>
 map <leader>n :set mouse-=a<cr>
 
 syntax on
-set background=dark
-" colorscheme colorful
-" colorscheme solarized
-colorscheme molokai
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " set guifont=Monospace\ 10
 " set guifont=monofur\ 14
