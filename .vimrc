@@ -6,7 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'scrooloose/nerdtree'
 " Bundle 'scrooloose/nerdcommenter'
@@ -19,6 +19,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
 Bundle 'embear/vim-localvimrc'
 Bundle 'ciaranm/detectindent'
+Bundle 'pangloss/vim-javascript'
 
 
 let g:neocomplcache_enable_at_startup = 1
@@ -38,6 +39,9 @@ set go-=m
 set go-=T
 set go+=i " Use a friggin icon
 set mouse=a
+
+map <leader>m :set mouse+=a<cr>
+map <leader>n :set mouse-=a<cr>
 
 syntax on
 set background=dark
@@ -215,4 +219,5 @@ vmap gt" s"gvs)gvs}i$<Esc>la_<Esc>gvll
 " vmap _jsp' s'gvs)%a;<esc>h%i$.t<esc>gv/'<cr>lls>a%=<space><esc>/><cr>i<space>%<esc>2?'<esc>l
 " vmap _jsp" s"gvs)%a;<esc>h%i$.t<esc>gv/"<cr>lls>a%=<space><esc>/><cr>i<space>%<esc>2?"<esc>l
 
-map <leader>t :CtrlPCurWD<cr>
+" map <leader>t :CtrlPCurWD<cr>
+" map <C-t> :CtrlPCurWD<cr>

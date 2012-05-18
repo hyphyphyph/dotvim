@@ -8,3 +8,5 @@ syn include @htmlCoffeeScript syntax/coffee.vim
 syn region coffeeScript start=+<script [^>]*type *=[^>]*text/coffeescript[^>]*>+
 \                       end=+</script>+me=s-1 keepend
 \                       contains=@htmlCoffeeScript,htmlScriptTag,@htmlPreproc
+
+setlocal ts=2 sts=2 sw=2 expandtab
