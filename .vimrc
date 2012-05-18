@@ -1,5 +1,6 @@
 set nocompatible
 filetype on
+filetype plugin on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -16,6 +17,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/detectindent'
 Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
+Bundle 'matchit.zip'
 
 Bundle 'groenewege/vim-less'
 
