@@ -1,6 +1,4 @@
 
-<!-- saved from url=(0065)http://vimcolorschemetest.googlecode.com/svn/colors/warm_grey.vim -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">
 set background=light
 
 hi clear
@@ -10,7 +8,7 @@ endif
 
 let colors_name = "black_on_white"
 
-if version &gt;= 700
+if version >= 700
   hi CursorLine guibg=#e4e2e0
   hi CursorColumn guibg=#e4e2e0
   hi MatchParen guifg=white guibg=#747270 gui=bold
@@ -64,7 +62,7 @@ hi Operator  guifg=#747270 gui=bold
 " HTML: arguments
 "hi Type       guifg=#202020 gui=none
 hi Type        guifg=#606060 gui=bold
-" Python: Standard exceptions, True&amp;False
+" Python: Standard exceptions, True&False
 hi Structure  guifg=#405060 gui=underline,bold
 hi Function   guifg=#203040 gui=bold
 
@@ -90,7 +88,7 @@ hi Todo       guifg=#848280 guibg=NONE gui=bold,underline
 hi Special    guifg=#602000 gui=none
 
 
-" color of &lt;TAB&gt;s etc...  
+" color of <TAB>s etc...  
 "hi SpecialKey guifg=#d8a080 guibg=#e8e8e8 gui=italic  
 hi SpecialKey guifg=#c4c2c0 guibg=#e4e2e0 gui=italic,bold  
 
@@ -101,4 +99,3 @@ hi DiffAdd guifg=NONE guibg=#c0e0d0 gui=bold
 hi DiffDelete guifg=NONE guibg=#f0a0a0 gui=italic,bold
 
 
-</pre></body></html>

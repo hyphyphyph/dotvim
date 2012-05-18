@@ -1,5 +1,5 @@
-set nocompatible               " be iMproved
-filetype on                   " required!
+set nocompatible
+filetype on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -9,26 +9,25 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'buftabs'
 Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
 
 Bundle 'tpope/vim-surround'
 Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/detectindent'
-
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/w3scraper'
+Bundle 'Raimondi/delimitMate'
+Bundle 'docunext/closetag.vim'
 
 Bundle 'groenewege/vim-less'
 
 Bundle 'pangloss/vim-javascript'
-Bundle 'hallettj/jslint.vim'
+" Bundle 'hallettj/jslint.vim'
 
+Bundle 'godlygeek/csapprox'
 Bundle 'altercation/vim-colors-solarized'
 
 
 let g:neocomplcache_enable_at_startup = 1
-
-" let g:Powerline_symbols = 'fancy'
-" let g:Powerline_cache_enabled = 1
+let g:ctrlp_working_path_mode = 0
 
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set showbreak=↪
@@ -47,7 +46,7 @@ map <leader>m :set mouse+=a<cr>
 map <leader>n :set mouse-=a<cr>
 
 syntax on
-set background=light
+set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
@@ -62,8 +61,6 @@ colorscheme solarized
 " set guifont=Monofur\ 12
 " set guifont=Envy\ Code\ R\ Powerline\ 10
 
-" set wildmode=list:longest
-
 set preserveindent
 set magic
 set ignorecase
@@ -76,7 +73,6 @@ set linespace=-1
 
 set showmatch
 set matchtime=1024 " Because... I can
-
 
 " Tab mappings.
 map <C-Up> :tabnew<cr>
@@ -195,8 +191,8 @@ let g:miniBufExplUseSingleClick = 1
 " Snippets
 imap <leader>888 /*<cr><space>*<cr>*/<cr><esc>kkA<space>
 imap <leader>''' """<cr>"""<esc>O
-imap '+ '<space>+<space><space>+<space>'<esc>hhhi
-imap "+ "<space>+<space><space>+<space>"<esc>hhhi
+" imap '+ '<space>+<space><space>+<space>'<esc>hhhi
+" imap "+ "<space>+<space><space>+<space>"<esc>hhhi
 
 " Awesome
 nmap ., /><<cr>a
