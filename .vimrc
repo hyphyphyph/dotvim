@@ -5,7 +5,7 @@ filetype plugin on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'buftabs'
