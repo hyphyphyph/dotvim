@@ -9,8 +9,12 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'buftabs'
+" Bundle 'TabBar'
+" Bundle 'rson/vim-bufstat'
+" Bundle 'minibufexpl.vim'
+" Bundle 'QuickBuf'
 Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
+" Bundle 'majutsushi/tagbar'
 
 Bundle 'tpope/vim-surround'
 Bundle 'Shougo/neocomplcache'
@@ -31,8 +35,11 @@ Bundle 'altercation/vim-colors-solarized'
 let g:neocomplcache_enable_at_startup = 1
 let g:ctrlp_working_path_mode = 0
 
-set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-set showbreak=↪
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+" set showbreak=↪
 
 " call pathogen#infect()
 
@@ -52,6 +59,8 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+map <leader><esc> :CtrlPBuffer<cr>
+
 " set guifont=Monospace\ 10
 " set guifont=monofur\ 14
 " set guifont=M+\ 1m\ 10
@@ -66,9 +75,6 @@ colorscheme solarized
 set preserveindent
 set magic
 set ignorecase
-
-filetype on
-filetype plugin on
 
 set scrolloff=1
 set linespace=-1
@@ -110,9 +116,6 @@ set ts=4 sts=4 sw=4 expandtab
 set nowrap
 set incsearch
 set smartcase
-
-" filetype on
-" filetype plugin indent on
 
 set autoread
 let mapleader = ","
