@@ -5,38 +5,21 @@ filetype plugin on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
-Bundle 'buftabs'
-" Bundle 'TabBar'
-" Bundle 'rson/vim-bufstat'
-" Bundle 'minibufexpl.vim'
-" Bundle 'QuickBuf'
-Bundle 'kien/ctrlp.vim'
-" Bundle 'majutsushi/tagbar'
+Bundle 'minibufexpl.vim'
 
 Bundle 'tpope/vim-surround'
-Bundle 'Shougo/neocomplcache'
 Bundle 'ciaranm/detectindent'
-Bundle 'Raimondi/delimitMate'
 Bundle 'docunext/closetag.vim'
 Bundle 'matchit.zip'
 
 Bundle 'groenewege/vim-less'
-
 Bundle 'pangloss/vim-javascript'
-" Bundle 'hallettj/jslint.vim'
 
-Bundle 'godlygeek/csapprox'
-Bundle 'altercation/vim-colors-solarized'
-
-
-let g:neocomplcache_enable_at_startup = 1
-let g:ctrlp_working_path_mode = 0
-
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+set comments=
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 " set showbreak=↪
@@ -51,19 +34,20 @@ set go-=T
 set go+=i " Use a friggin icon
 set mouse=a
 
-map <leader>m :set mouse+=a<cr>
-map <leader>n :set mouse-=a<cr>
+map <C-n> :set mouse-=a<cr>
+map <C-m> :set mouse+=a<cr>
 
 syntax on
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
+colorscheme molokai
 
 map <leader><esc> :CtrlPBuffer<cr>
 
 " set guifont=Monospace\ 10
 " set guifont=monofur\ 14
-" set guifont=M+\ 1m\ 10
+set guifont=M+\ 1m\ 10
 " set guifont=Verily\ Serif\ Mono\ 10
 " set guifont=Ubuntu\ Mono\ 12
 " set guifont=Terminus\ 14
