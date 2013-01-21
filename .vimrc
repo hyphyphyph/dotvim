@@ -15,8 +15,10 @@ Bundle 'ciaranm/detectindent'
 Bundle 'docunext/closetag.vim'
 Bundle 'matchit.zip'
 
+Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
+Bundle 'vim-scripts/vim-stylus'
 
 set comments=
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -83,6 +85,8 @@ au BufNewFile,BufRead *.mako set filetype=python
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.json set filetype=javascript
 au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.jade set filetype=jade
+au BufNewFile,BufRead *.styl set filetype=stylus
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -187,7 +191,7 @@ imap <leader>''' """<cr>"""<esc>O
 nmap ., /><<cr>a
 nmap ,. ?><<cr>a
 
-nmap <F2> :NERDTreeToggle<return>
+nmap <C-\> :NERDTreeToggle<return>
 
 " Basic EMACS style nav
 imap <C-f> <Right>
